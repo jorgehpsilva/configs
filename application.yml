@@ -10,13 +10,12 @@ management:
     web:
       exposure:
         include: health,info
-#  endpoint:
-#    health:
-#      show-details: always
+  endpoint:
+    health:
+      show-details: always
 info:
   author: Jorge Silva
   mail: jorgehpsilva@gmail.com
-  cel: 90237032493
 server:
   port: ${PORT:9999}
 message: Mensagem aleatória
