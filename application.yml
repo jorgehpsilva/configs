@@ -1,21 +1,37 @@
+spring:
+  zipkin:
+    base-url: http://zipkin-service:9411/
+  rabbitmq:
+    username: guest
+    password: guest
+    host: rabbit-service
+    port: 5672
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
 management:
+  health:
+    circuitbreakers:
+      enabled: true
   info:
     env:
       enabled: true
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: health,info,circuitbreakers,circuitbreakerevents
   endpoint:
     health:
       show-details: always
 info:
   author: Jorge Silva
   mail: jorgehpsilva@gmail.com
+  cel: 313313131
 server:
   port: ${PORT:9999}
-message: Mensagem aleatória
+message: Mensagem generica
+
+queue:
+  serie-service: queue-serie-service
+  movie-service: queue-movie-service
