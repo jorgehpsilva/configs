@@ -27,7 +27,7 @@ management:
 info:
   author: Jorge Silva
   mail: jorgehpsilva@gmail.com
-  cel: 313313131
+  cel: 6324986654
 server:
   port: ${PORT:9999}
 message: Mensagem generica
